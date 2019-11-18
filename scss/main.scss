@@ -1,0 +1,319 @@
+$colorParTxt: #505F98;
+$colorTitleTxt: #091133;
+$colorBtn: #111B47;
+$colorLogo: #37447E;
+$colorP-section: #6F7CB2;
+
+@mixin txt-btn-specification{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+}
+
+@mixin ul {
+    display: flex;
+    list-style-type: none;    
+    padding-left: 0;
+}
+
+@mixin h2-specific {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: $colorTitleTxt;
+}
+
+@mixin p-specific {
+    font-size: 16px;
+    line-height: 26px;
+    color: $colorP-section;
+}
+@mixin a-specific {
+    text-decoration: none;
+    cursor: pointer;
+}
+@mixin sm-btn {
+    display: inline-block;
+    padding: 4px 5px ;
+    border-radius: 2px;
+    color: #fff;
+    background-color: $colorBtn;
+    @include a-specific;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/**/
+.container{
+    width: 1110px;
+    margin: 0 auto;
+}
+/**/
+header{
+    background: url('../img/illustration inner.svg') no-repeat right;
+    height: 1105px;
+    /* border: 2px solid red; */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul{
+        @include ul;
+    }
+    li{
+        margin-right: 60px;
+        text-transform: capitalize;
+        font-size: 14px;
+        line-height: 24px; 
+    }
+    a{
+        @include a-specific;
+        color: $colorParTxt;
+    }
+    .logo{
+        color: $colorLogo;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 38px;
+    }
+        .txt-btn{
+            display: inline-block; 
+            background-color: $colorBtn;
+            height: 20px;
+            width: 160px;
+            padding: 4px 0;
+            border-radius: 2px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 22px;
+            text-transform: capitalize;
+        }
+    .text-headr{
+        display: inline-block;
+        width: 550px;
+        margin-top: 150px;
+        h2{
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 66px;
+            letter-spacing: 1px;
+            color: $colorTitleTxt;
+        }
+        p{
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.4px;
+            color: $colorParTxt;
+        }
+    }
+    .btn-label{
+        margin-top: 70px;
+        .purchase-btn{
+            margin-right: 30px;
+            background-color: $colorBtn;
+            color: #fff;
+            width: 190px;
+            height: 25px;
+            padding: 5px 0;
+            border-radius: 2px;
+            @include txt-btn-specification; 
+        }
+        .learn-btn{
+            color: $colorBtn;
+            width: 188px;
+            height: 23px;
+            padding: 3px 0;   
+            border: 2px solid $colorBtn;
+            border-radius: 2px;
+            @include txt-btn-specification;
+        }
+    }
+}
+/**/
+.undraw{
+    display: flex;
+    align-items: center;
+    height: 745px;
+    .left{
+        width: 550px;
+    }
+    h2{
+        @include h2-specific;
+    }
+    p{
+        @include p-specific;     
+    }
+    .goes-wht-m{
+        margin-right: 45px;
+    }
+    .title-goes{
+        display: inline-block;
+        width: 250px;
+        margin-top: 80px;
+        h3{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        p{  
+            color: #5D6970;
+            font-size: 12px;
+            line-height: 18px;
+            line-height: 22px;
+        } 
+    }
+    .undraw-hero{
+        width: 550px;
+        margin-left: 10px;
+    }
+}
+/**/
+.similar{
+    display: flex;
+    height: 550px;
+    img{
+        width: 482px;
+        height: 350px;
+        margin-right: 150px;
+    }
+    .similar-txt{
+        display: inline-block;
+        width: 450px;
+        height: 250px;  
+    }
+    h2{
+        @include h2-specific; 
+    }
+    p{
+        @include p-specific;  
+    }
+    .sm-btn{
+        @include sm-btn;
+    }
+}
+/**/
+.bg-cloud{
+    background: url('../img/Rectangle.svg') no-repeat center bottom / cover;
+    background-position-y: 100px;
+}
+.pricing{
+    text-align: center;
+    height: 950px;
+    background: url('../img/Path.svg') no-repeat center center;
+/* #F3F6FF */
+    .info{
+        margin: 0 auto;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    h2{
+        margin-top: 200px;
+        @include h2-specific;
+    }
+    p{
+        @include p-specific;
+    }
+    .kit{
+        margin-top: 35px;
+        h3{
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 66px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #222F65;
+        }
+        p{
+            margin-top: -50px;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            color: #222F65;
+        }
+    }
+    .simple{
+        margin-top: 50px;
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #5D6970;  
+        }
+        .sm-btn{
+            @include sm-btn;
+        } 
+    }
+}
+/**/
+footer{
+    background: #E7ECFF;
+    a{                
+        @include a-specific;
+        color: #929ECC;
+        /**/
+    }
+    .foot-content{
+        
+        .land{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+            border-bottom: 2px solid #CDD1D4;
+            p{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #939EA4;
+            }
+            .logo-foot{
+                color: $colorLogo;
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 38px;
+            }
+            .sml-btn{
+                @include sm-btn;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul{
+            @include ul;
+            font-size: 14px;
+            line-height: 24px;   
+        }
+        li{
+            padding-right: 60px;
+            text-transform: capitalize;
+        }
+        .social li{
+            padding: 0;
+            margin-left: 30px;  
+        }
+    }
+}
+
+
